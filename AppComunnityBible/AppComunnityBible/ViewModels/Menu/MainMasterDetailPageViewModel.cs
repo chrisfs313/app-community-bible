@@ -1,9 +1,9 @@
-﻿using AppComunnityBible.Views;
+﻿using AppComunnityBible.Models.Menu;
 using System;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace AppComunnityBible.ViewModels
+namespace AppComunnityBible.ViewModels.Menu
 {
     public class MainMasterDetailPageViewModel
     {

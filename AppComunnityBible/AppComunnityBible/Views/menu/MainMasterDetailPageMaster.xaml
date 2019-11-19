@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:localViews="clr-namespace:AppComunnityBible.Views"
-			 xmlns:localViewModels="clr-namespace:AppComunnityBible.ViewModels"
+			 xmlns:localMenuModel="clr-namespace:AppComunnityBible.Models.Menu"
+			 xmlns:localMenuViewModel="clr-namespace:AppComunnityBible.ViewModels.Menu"
 			 xmlns:localBehaviours="clr-namespace:AppComunnityBible.Behaviours"
+			 xmlns:localViews="clr-namespace:AppComunnityBible.Views"
 			 mc:Ignorable="d"
              x:Class="AppComunnityBible.Views.MainMasterDetailPageMaster"
              Title="Master">
 
 	<ContentPage.BindingContext>
-		<localViewModels:MainMasterDetailPageViewModel/>
+		<localMenuViewModel:MainMasterDetailPageViewModel/>
 	</ContentPage.BindingContext>
 
 	<StackLayout>
@@ -42,9 +43,9 @@
 			</ListView.Header>
 
 			<ListView.ItemsSource>
-				<x:Array Type="{x:Type localViews:MasterPageItem}">
-					<localViews:MasterPageItem Title="Search" IconSource="" TargetType="{x:Type localViews:PageSearch}" />
-					<localViews:MasterPageItem Title="Configuration" IconSource="" TargetType="{x:Type localViews:PageConfiguration}" />
+				<x:Array Type="{x:Type localMenuModel:MasterPageItem}">
+					<localMenuModel:MasterPageItem Title="Search" IconSource="" TargetType="{x:Type localViews:PageSearch}" />
+					<localMenuModel:MasterPageItem Title="Configuration" IconSource="" TargetType="{x:Type localViews:PageConfiguration}" />
 				</x:Array>
 			</ListView.ItemsSource>
 			<ListView.ItemTemplate>

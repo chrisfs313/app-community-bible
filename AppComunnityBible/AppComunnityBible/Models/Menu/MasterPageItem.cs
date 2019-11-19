@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AppComunnityBible.Views
+namespace AppComunnityBible.Models.Menu
 {
 
     public class MasterPageItem
