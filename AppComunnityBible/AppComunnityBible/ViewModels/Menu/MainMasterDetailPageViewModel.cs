@@ -18,10 +18,11 @@ namespace AppComunnityBible.ViewModels.Menu
         {
             ItemSelectedCommand = new Command<SelectedItemChangedEventArgs>(OnItemSelected);
 
-            // Create the pages
+
             ListItemSource = new ObservableCollection<MasterPageItem>();
-            ListItemSource.Add(new MasterPageItem() { Title = "Search", TargetType = typeof(PageSearch) });
-            ListItemSource.Add(new MasterPageItem() { Title = "Configuration", TargetType = typeof(PageConfiguration) });
+            ListItemSource.Add(new MasterPageItem() { Title = "Buscar", TargetType = typeof(PageSearch) });
+            ListItemSource.Add(new MasterPageItem() { Title = "Biblia", TargetType = typeof(PageBibleBooks) });
+            ListItemSource.Add(new MasterPageItem() { Title = "Configuracion", TargetType = typeof(PageConfiguration) });
         }
 
         void OnItemSelected(SelectedItemChangedEventArgs e)
