@@ -16,7 +16,7 @@
 	</ContentPage.BindingContext>
 
 	<StackLayout>
-		<ListView x:Name="MenuItemsListView" x:FieldModifier="public" >
+		<ListView x:FieldModifier="public" ItemsSource="{Binding ListItemSource }">
 			<ListView.Behaviors>
 				<localBehaviours:ListViewSelectedItemBehavior Command="{Binding ItemSelectedCommand}"  />
 			</ListView.Behaviors>
@@ -42,12 +42,6 @@
 				</Grid>
 			</ListView.Header>
 
-			<ListView.ItemsSource>
-				<x:Array Type="{x:Type localMenuModel:MasterPageItem}">
-					<localMenuModel:MasterPageItem Title="Search" IconSource="" TargetType="{x:Type localViews:PageSearch}" />
-					<localMenuModel:MasterPageItem Title="Configuration" IconSource="" TargetType="{x:Type localViews:PageConfiguration}" />
-				</x:Array>
-			</ListView.ItemsSource>
 			<ListView.ItemTemplate>
 				<DataTemplate>
 					<ViewCell>
