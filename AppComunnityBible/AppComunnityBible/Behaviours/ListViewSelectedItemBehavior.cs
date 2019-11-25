@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace AppComunnityBible.Behaviours
+namespace AppCommunityBible.Behaviours
 {
     public class ListViewSelectedItemBehavior : Behavior<ListView>
     {

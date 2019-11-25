@@ -1,31 +1,36 @@
-﻿using AppComunnityBible.Models.Menu;
-using AppComunnityBible.Views;
+﻿using AppCommunityBible.Data.Context;
+using AppCommunityBible.Data.Repositories;
+using AppCommunityBible.Models.Menu;
+using AppCommunityBible.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace AppComunnityBible.ViewModels.Menu
+
+namespace AppCommunityBible.ViewModels.Menu
 {
     public class MainMasterDetailPageViewModel
     {
+
         public ICommand ItemSelectedCommand { get; private set; }
 
-        public ObservableCollection<MasterPageItem> ListItemSource { get; set; }
+        public ObservableCollection<MasterPageItem> ListItemSource { get; private set; }
 
-        public MainMasterDetailPageViewModel()
+        public MainMasterDetailPageViewModel(IBibleRepository repository)
         {
             ItemSelectedCommand = new Command<SelectedItemChangedEventArgs>(OnItemSelected);
-
 
             ListItemSource = new ObservableCollection<MasterPageItem>();
             ListItemSource.Add(new MasterPageItem() { Title = "Buscar", TargetType = typeof(PageSearch) });
             ListItemSource.Add(new MasterPageItem() { Title = "Biblia", TargetType = typeof(PageBibleBooks) });
             ListItemSource.Add(new MasterPageItem() { Title = "Configuracion", TargetType = typeof(PageConfiguration) });
+
+            var books = repository.GetBooksAsync().Result;
         }
 
-        void OnItemSelected(SelectedItemChangedEventArgs e)
+        private void OnItemSelected(SelectedItemChangedEventArgs e)
         {
             var item = e.SelectedItem as MasterPageItem;
 

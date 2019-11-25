@@ -1,7 +1,7 @@
 ﻿using MvvmHelpers;
 using System;
 
-namespace AppComunnityBible.Models.Menu
+namespace AppCommunityBible.Models.Menu
 {
     public class MasterPageItem : ObservableObject
     {

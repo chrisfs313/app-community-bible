@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace AppComunnityBible.Views
+namespace AppCommunityBible.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageSearch : ContentPage

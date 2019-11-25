@@ -4,8 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="AppComunnityBible.Views.MainMasterDetailPage"
-             xmlns:pages="clr-namespace:AppComunnityBible.Views">
+             x:Class="AppCommunityBible.Views.MainMasterDetailPage"
+             xmlns:pages="clr-namespace:AppCommunityBible.Views">
   <MasterDetailPage.Master>
     <pages:MainMasterDetailPageMaster x:Name="MasterPage" />
   </MasterDetailPage.Master>

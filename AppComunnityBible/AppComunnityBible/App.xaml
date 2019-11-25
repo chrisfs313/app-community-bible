@@ -3,14 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:localView="clr-namespace:AppComunnityBible.Views"
+			 xmlns:localView="clr-namespace:AppCommunityBible.Views"
+			 xmlns:localViewModels="clr-namespace:AppCommunityBible.ViewModels"
              mc:Ignorable="d"
-             x:Class="AppComunnityBible.App">
-    <Application.Resources>
-
-    </Application.Resources>
-
-	<Application.MainPage>
-		<localView:MainMasterDetailPage/>
-	</Application.MainPage>
+             x:Class="AppCommunityBible.App">
+	<Application.Resources>
+		<ResourceDictionary>
+			<localViewModels:ViewModelLocator x:Key="Locator" />
+		</ResourceDictionary>
+	</Application.Resources>
 </Application>

@@ -3,17 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:localMenuModel="clr-namespace:AppComunnityBible.Models.Menu"
-			 xmlns:localMenuViewModel="clr-namespace:AppComunnityBible.ViewModels.Menu"
-			 xmlns:localBehaviours="clr-namespace:AppComunnityBible.Behaviours"
-			 xmlns:localViews="clr-namespace:AppComunnityBible.Views"
+			 xmlns:localMenuModel="clr-namespace:AppCommunityBible.Models.Menu"
+			 xmlns:localMenuViewModel="clr-namespace:AppCommunityBible.ViewModels.Menu"
+			 xmlns:localBehaviours="clr-namespace:AppCommunityBible.Behaviours"
+			 xmlns:localViews="clr-namespace:AppCommunityBible.Views"
 			 mc:Ignorable="d"
-             x:Class="AppComunnityBible.Views.MainMasterDetailPageMaster"
-             Title="Master">
-
-	<ContentPage.BindingContext>
-		<localMenuViewModel:MainMasterDetailPageViewModel/>
-	</ContentPage.BindingContext>
+             x:Class="AppCommunityBible.Views.MainMasterDetailPageMaster"
+             Title="Master"
+			 BindingContext="{Binding MainMasterDetailPageViewModel, Source={StaticResource Locator}}">
 
 	<StackLayout>
 		<ListView x:FieldModifier="public" ItemsSource="{Binding ListItemSource }">
